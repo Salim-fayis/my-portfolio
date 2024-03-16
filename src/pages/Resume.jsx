@@ -5,9 +5,9 @@ const Resume = () => {
   return (
     <section id="resume" className="resume main ">
       <div className="container mx-auto  ">
-        <div className="section-title">
+        <div className="text-center mb-10  section-title">
           <h2 className="text-4xl font-bold">Resume</h2>
-          <p>Check My Resume</p>
+          <p className="italic text-gray-600">Check My Resume</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

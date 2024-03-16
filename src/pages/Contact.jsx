@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact main">
       <div className="container mx-auto">
-        <div className="section-title">
+        <div className="text-center mb-10 section-title">
           <h2 className="text-4xl font-bold">Contact</h2>
           <p>Contact Me</p>
         </div>
@@ -35,11 +35,14 @@ const Contact = () => {
           </div>
 
           <div className="col-span-1 md:col-span-1 lg:col-span-2 grid grid-cols-1 gap-4">
-            <div className="info-box hover:bg-gray-800 bg-opacity-25 p-6 rounded-lg shadow-2xl flex-grow transition-colors">
-              <i className="bx bx-envelope text-3xl"></i>
-              <h3 className="text-xl font-semibold">Email Me</h3>
-              <p className="text-green-300">salimanchu2@gmail.com</p>
-            </div>
+          <div className="info-box hover:bg-gray-800 bg-opacity-25 p-6 rounded-lg shadow-2xl flex-grow transition-colors">
+    <a href="mailto:salimanchu2@gmail.com">
+        <i className="bx bx-envelope text-3xl"></i>
+        <h3 className="text-xl font-semibold">Email Me</h3>
+        <p className="text-green-300">salimanchu2@gmail.com</p>
+    </a>
+</div>
+
 
             <div className="info-box hover:bg-gray-800 bg-opacity-25 p-6 rounded-lg shadow-2xl flex-grow transition-colors  ">
               <i className="bx bx-phone-call text-3xl"></i>

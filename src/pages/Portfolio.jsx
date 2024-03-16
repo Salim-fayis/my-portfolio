@@ -32,31 +32,28 @@ const Portfolio = ({ imageUrl, description, link, category }) => {
         className={`relative w-full  h-full transition-opacity duration-100 ${
           isHovered || showDetails ? 'opacity-40' : 'opacity-100'
         }`}
+        onClick={handleShowDetails}
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
       >
         <img src={imageUrl} alt="Card" className="w-full h-full object-cover" />
+        <h1 className="text-black  font-extrabold mb-2">Project Title</h1>
+
         {isHovered && (
-          <div className="absolute inset-0  flex flex-col items-center justify-center ">
-            <h1 className="text-black  font-extrabold mb-2">Project Title</h1>
+          <div className="absolute cursor-pointer inset-0  flex flex-col items-center justify-center ">
             <a
               href={link}
               className="text-blue-500"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={(e) => {
-                e.preventDefault();
-                handleShowDetails();
-              }}
+             onClick={(e) => e.preventDefault()}
             >
-              {/* Include the SVG directly in the JSX */}
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-12 h-12 mb-1 ">
-                <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
-              </svg>
             </a>
           </div>
+          
         )}
       </div>
+      
 
       {showDetails && (
        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-75 ">
@@ -107,60 +104,60 @@ const Filter = ({ categories, selectedCategory, onSelectCategory }) => {
 const PortfolioSection = () => {
   const imageList = [
     {
-      imageUrl: dr,
-      description: 'Description 1',
-      link: 'https://example.com/1',
+      imageUrl: eat,
+      description: 'Eat At Here',
+      link: 'https://salim-fayis.github.io/material-ui-resturant-website/',
       category: 'React',
     },
     {
-      imageUrl: eat,
-      description: 'Description 2',
-      link: 'https://salim-fayis.github.io/material-ui-resturant-website/',
-      category: 'Full Stack',
-    },
-    {
       imageUrl: ecommerce,
-      description: 'Description 1',
+      description: 'E-Store',
       link: 'https://salim-fayis.github.io/e-store-main/',
       category: 'React',
     },
     {
-      imageUrl: educational,
-      description: 'Description 2',
-      link: 'https://salim-fayis.github.io/educational-website/',
-      category: 'Full Stack',
+      imageUrl: hotel,
+      description: 'Book Your Room',
+      link: 'https://salim-fayis.github.io/hotel-booking/',
+      category: 'React',
     },
     {
-      imageUrl: netflix,
-      description: 'Description 2',
-      link: 'https://myflixbysalim.netlify.app/',
+      imageUrl: educational,
+      description: 'Learn From Here ',
+      link: 'https://salim-fayis.github.io/educational-website/',
+      category: 'React',
+    },
+    {
+      imageUrl: book,
+      description: 'Book Hub',
+      link: 'https://example1.com',
       category: 'Full Stack',
     },
     {
       imageUrl: restuarant,
-      description: 'Description 2',
+      description: 'Restuarant',
       link: 'https://restuarant-app-by-salim.netlify.app/',
       category: 'React',
     },
     {
-      imageUrl: hotel,
-      description: 'Description 2',
-      link: 'https://salim-fayis.github.io/hotel-booking/',
+      imageUrl: dr,
+      description: 'Book Your Doctor ',
+      link: 'https://example1.com',
       category: 'Full Stack',
     },
     {
-      imageUrl: book,
-      description: 'Description 2',
-      link: 'https://example.com/2',
+      imageUrl: netflix,
+      description: 'Netflix',
+      link: 'https://myflixbysalim.netlify.app/',
       category: 'React',
     },
     {
       imageUrl: ems,
-      description: 'Description 2',
+      description: 'Employee Managment System',
       link: 'https://salim-fayis.github.io/employee-managing-app-react/',
-      category: 'Full Stack',
+      category: 'React',
     },
-    // Add more images here
+    
   ];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -173,7 +170,7 @@ const PortfolioSection = () => {
 
   return (
     <section id='portfolio' className="my-8 main">
-      <h2 className="text-3xl font-bold mb-4">Portfolio Section</h2>
+      <h2 className="text-center mb-10 text-3xl font-bold ">Portfolio Section</h2>
       <Filter
         categories={categories}
         selectedCategory={selectedCategory}

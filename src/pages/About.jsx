@@ -38,7 +38,7 @@ const About = () => {
       <div className="container mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-4xl  font-bold">About</h2>
-          <p className="italic text-gray-600">Learn more about me</p>
+          <p className="italic text-gray-600">About me</p>
         </div>
 
         <div className="flex flex-wrap items-center">
@@ -47,7 +47,7 @@ const About = () => {
           </div>
           <div className="lg:w-2/3 pt-4 lg:pt-0 ">
             <h3 className="text-2xl font-semibold">Web Developer</h3>
-            <p className="italic text-gray-700 leading-7">
+            <p className="italic  leading-7">
              I am passionate developer with skills in web application.I am very passionate to learn new things and implementing them to the projects.
             </p>
 
@@ -79,7 +79,7 @@ const About = () => {
       {/* My Skills */}
       <div className="text-center mb-10 mt-10">
           <h2 className="text-4xl font-bold">Skills</h2>
-          <p className="italic text-gray-600">Learn more about me</p>
+          <p className="italic text-gray-600">See my skills</p>
         </div>
 <div className="flex flex-wrap  text-black font-bold justify-evenly">
       {skillsData.map((skill, index) => (
