@@ -1,4 +1,4 @@
-// src/components/Home.jsx
+
 import React, { useState, useEffect, useRef } from 'react';
 import Lottie from 'lottie-react';
 import cartoonAnimation from '../assets/json/about.json';

@@ -54,6 +54,13 @@ const Resume = () => {
                   description:
                     'I have completed a six month training program in MERN stack from Luminar Technolab in kochi. Where i build my knowledge in the full stack development.',
                 },
+                {
+                  title: 'Full stack developer ',
+                  date: '2023 - 2024',
+                  location: 'Malappuram',
+                  description:
+                    'I have build projects on frontend and backend and maintained some projects and helped in Full stack developing.',
+                },
 
               ]}
             />
